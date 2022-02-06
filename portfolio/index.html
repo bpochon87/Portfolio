@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="./CSS/final_website.css">
+        <link rel="shortcut icon" type="image/img" href="icons/favicon/favicon-16x16.png">
+        <title>Brady Pochon | Portfolio</title>
+    </head>
+
+    <body>
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Background Video -->
+        <div id="home">
+            <video autoplay muted loop id="circuit_video">
+                <source src="./Video/circuit.mp4" type="video/mp4">
+                Your browser is unsupportive of HTML5 video.
+            </video>
+        </div>
+        
+        <!-- Video Text -->
+        <div class="video_text">
+            <h1 class="white_text stroke">Brady Pochon | Software Developer | Portfolio</h1>
+            <strong>
+                <p class="center stroke">
+                    <q>
+                        Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away
+                    </q>
+                    <br>– Antoine de Saint-Exupery
+                    <br>
+                    <br>Welcome to my portfolio webpage where I hope you'll take the time to dig into my projects to see what I offer you.
+                    <br>
+                    <br>I would thoroughly enjoy connecting with you, too, so please reach out.
+                </p>
+            </strong>
+        </div>
+
+        <!-- ABOUT section -->
+        <div class="row" id="about">
+            <!-- Left Column -->
+            <div class="column_2">
+                <img src="./Image/van.jpg" alt="Beautiful day for a van ride">
+            </div>
+            <!-- Right Column -->
+            <div class="column_1">
+                <h1>About Brady</h1>
+                <p>
+                    I am a software developer who thoroughly enjoys the explicit nature of computers. If I'm not coding, I'm skateboarding, biking, or relaxing with my wife, Sara, and our cat, Suerte.
+                    <br>
+                    <br>I graduated from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and have working proficiency in <strong>HTML, CSS, JavaScript, SQL, C#, Python, among others.</strong>
+                    <br>
+                    <br>I am a full-stack developer and I am not afraid to obsess over your project. <a href="#contact">Contact</a> me below.
+                </p>
+            </div>
+        </div>
+
+        <!-- GITHUB section -->
+        <div class="row" id="github">
+            <!-- Left Column -->
+            <div class="column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    View my current and past projects on my GitHub profile.
+                    <br>
+                    <p class="center"><a href="https://www.github.com/bpochon87" target="_blank">Brady Pochon's GitHub</a></p>
+                </p>
+            </div>
+            <!-- Right Column -->
+            <div class="column_2">
+                <a href="https://www.github.com/bpochon87" target="_blank"><img src="./Image/GitHub_logo.png" alt="GitHub logo"></a>
+            </div>
+        </div>
+
+        <!-- CONTACT section -->
+        <div class="row" id="contact">
+            <!-- Contact Image, Left Column -->
+            <div class="column_2 column_tall">
+                <img src="./Image/lilacs.jpg" alt="Brady, Sara, and Suerte">
+            </div>
+            <!-- Contact Form, Right Column -->
+            <div class="column_1 column_tall">
+                <h1>Reach Out Here</h1>
+                <!-- This specifies where and how to send the form data. Blank for now -->
+                <form action="https://formspree.io/f/mnqwpgpb" method="post">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Enter your name here">
+                    <label>E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your e-mail here">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Enter your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!-- FOOTER section-->
+        <footer>
+            <p>
+                <p class="center">&copy; Brady Pochon | 2022</p>
+            </p>
+        </footer>
+    </body>
+</html>
