@@ -10,5 +10,4 @@
   <bold>Backend programs utilized:</bold>
   <ul>
   <li>Filezilla</li>
-  <li>cPanel</li>
   </ul>
