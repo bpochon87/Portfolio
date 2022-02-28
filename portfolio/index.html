@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
+        <!-- HEAD -->
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="./CSS/final_website.css">
-        <link rel="shortcut icon" type="image/img" href="icons/favicon/favicon-16x16.png">
+        <script src="./JS/portfolio.js" defer></script>
+        <link rel="shortcut icon" type="image/img" href="./Icon/favicon/favicon-32x32.png"> <!-- FAVICON -->
         <title>Brady Pochon | Portfolio</title>
     </head>
 
-    <body>
+        <!-- BODY -->
+    <body class="Background">
 
         <!-- NAVBAR -->
+    
         <div class="navbar">
             <a href="#home">Home</a>
+            <a href="#Slideshow">Slides</a>
             <a href="#about">About</a>
-            <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a href="#github">GitHub</a> 
         </div>
 
         <br>
@@ -26,6 +30,7 @@
         <div id="home">
             <video autoplay muted loop id="circuit_video">
                 <source src="./Video/circuit.mp4" type="video/mp4">
+                <!-- Displayed message if video fails -->
                 Your browser is unsupportive of HTML5 video.
             </video>
         </div>
@@ -40,13 +45,74 @@
                     </q>
                     <br>– Antoine de Saint-Exupery
                     <br>
-                    <br>Welcome to my portfolio webpage where I hope you'll take the time to dig into my projects to see what I offer you.
+                    <br>Welcome. I built this website to showcase what my ever-expanding toolkit looks like.
                     <br>
-                    <br>I would thoroughly enjoy connecting with you, too, so please reach out.
+                    <br>I would thoroughly enjoy connecting with you, so please reach out.
                 </p>
             </strong>
         </div>
 
+        <!-- SLIDES -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                    <!-- SLIDE 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/squareFam.jpg" alt="Brady, wife Sara, and cat Suerte.">
+                        <div class="text">Together, let's make your project happen.</div>
+                    </div>
+
+                    <!-- SLIDE 2 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos.">
+                        <div class="text">I'm a fullstack software developer,<br> comfortable with:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+
+                    <!-- SLIDE 3 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/Python.png" alt="Python logo.">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+
+                    <!-- SLIDE 4 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/C_Sharp_and_Dot_NET.png" alt="C# logo.">
+                        <div class="text">the language C# and the framework .NET,</div>
+                    </div>
+
+                    <!-- SLIDE 5 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/SQL_and_Database.jpg" alt="SQL logo.">
+                        <div class="text">back end development, databases, and SQL.</div>
+                    </div>
+
+                    <!-- SLIDE 6 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Image/laptop.jpg" alt="Laptop picture.">
+                        <div class="text"><a class="white_text contact" onclick="openForm()">Contact me and let's do this.</a></div>
+                    </div>
+
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+                <!-- Break added for space between the slides and the dots -->
+                <br>
+
+                <!-- Slideshow dots (these are another way for users to navigate through slideshow) -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>        
+        
         <!-- ABOUT section -->
         <div class="row" id="about">
             <!-- Left Column -->
@@ -61,7 +127,7 @@
                     <br>
                     <br>I graduated from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and have working proficiency in <strong>HTML, CSS, JavaScript, SQL, C#, Python, among others.</strong>
                     <br>
-                    <br>I am a full-stack developer and I am not afraid to obsess over your project. <a href="#contact">Contact</a> me below.
+                    <br>I am a full-stack developer and I am not afraid to obsess over your project. Let's make it happen.
                 </p>
             </div>
         </div>
@@ -83,24 +149,27 @@
             </div>
         </div>
 
-        <!-- CONTACT section -->
-        <div class="row" id="contact">
-            <!-- Contact Image, Left Column -->
-            <div class="column_2 column_tall">
-                <img src="./Image/lilacs.jpg" alt="Brady, Sara, and Suerte">
-            </div>
-            <!-- Contact Form, Right Column -->
-            <div class="column_1 column_tall">
-                <h1>Reach Out Here</h1>
-                <!-- This specifies where and how to send the form data. Blank for now -->
-                <form action="https://formspree.io/f/mnqwpgpb" method="post">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Enter your name here">
-                    <label>E-mail:</label>
-                        <input type="text" id="email" name="email" placeholder="Enter your e-mail here">
-                    <label>Message:</label>
-                        <input type="text" id="message" name="message" placeholder="Enter your message here">
-                        <input type="submit" value="SUBMIT">
+        <!-- CONTACT form -->
+        <div class="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mnqwpgpb" method="POST" class="form-container">
+                    <h1>Reach Out Here</h1>
+
+                    <label for="name"><strong>Name</strong></label>
+                    <input type="text" placeholder="Your Name Here" name="name" required>
+
+                    <label for="phone"><strong>Phone</strong></label>
+                    <input type="text" placeholder="Phone Number Here" name="phone">
+                    
+                    <label for="email"><strong>E-mail</strong></label>
+                    <input type="email" placeholder="E-mail Address Here" name="email" required>
+
+                    <label for="message"><strong>Message</strong></label>
+                    <input type="text" placeholder="Message Here" name="message">
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
